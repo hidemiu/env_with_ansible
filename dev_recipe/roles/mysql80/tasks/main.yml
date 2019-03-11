@@ -9,3 +9,7 @@
 
 - name: start mysql and enabled
   service: name=mysqld state=started enabled=yes
+
+# Automatic mysql_secure_instllation
+# https://www.soudegesu.com/mysql/mysql8-password/
+# About mysql_secure_installation: https://blog.apar.jp/linux/9868/
