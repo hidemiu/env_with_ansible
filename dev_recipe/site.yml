@@ -7,4 +7,6 @@
   
   roles:
   - { role: setup_httpd }
+  - { role: repo_remi }
+
   
