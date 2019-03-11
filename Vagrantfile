@@ -17,8 +17,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # boxes at https://atlas.hashicorp.com/search.
     dev.vm.box = "bento/centos-7.3"
 
-    # dev.vm.provision :shell, :inline => "echo Hide Vagrant"
-    # dev.vm.provision :shell, :path => "provision.sh"
+    dev.vm.provision :shell, :inline => "echo Hide Vagrant"
+    dev.vm.provision :shell, :path => "provision.sh"
 
     # Disable automatic box update checking. If you disable this, then
     # boxes will only be checked for updates when the user runs
@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
-    dev.vm.network "private_network", ip: "192.168.33.111"
+    dev.vm.network "private_network", ip: "192.168.33.11"
 
     # Create a public network, which generally matched to bridged network.
     # Bridged networks make the machine appear as another physical device on
@@ -51,10 +51,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # argument is a set of non-required options.
     # config.vm.synced_folder "../data", "/vagrant_data"
     # config.vm.synced_folder "./", "/vagrant", owner: 'vagrant', group: 'apache', mount_options: ['dmode=777', 'fmode=777']
-
-    # config.vm.synced_folder "./", "/var/www/html", :mount_options => ["dmode=777", "fmode=777"]
-
-    dev.vm.synced_folder "./", "/vagrant", :mount_options => ["dmode=777", "fmode=777"]
+    # dev.vm.synced_folder "./", "/vagrant", :mount_options => ["dmode=777", "fmode=777"]
+      
+    config.vm.synced_folder "./", "/var/www/html", :mount_options => ["dmode=775", "fmode=775"]
 
     # Provider-specific configuration so you can fine-tune various
     # backing providers for Vagrant. These expose provider-specific options.

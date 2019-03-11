@@ -19,8 +19,8 @@ sudo systemctl start httpd.service
 # sudo chkconfig httpd on
 
 # Setup shared directory to apache
-sudo rm -rf /var/www/html
-sudo ln -fs /vagrant /var/www/html
+# sudo rm -rf /var/www/html
+# sudo ln -fs /vagrant /var/www/html
 
 # Start mysql
 sudo systemctl enable mysqld.service
