@@ -1,0 +1,10 @@
+#
+# site.yml
+#
+---
+- hosts: all
+  become: yes
+  
+  roles:
+  - { role: setup_httpd }
+  

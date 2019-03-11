@@ -18,7 +18,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     dev.vm.box = "bento/centos-7.3"
 
     dev.vm.provision :shell, :inline => "echo Hide Vagrant"
-    dev.vm.provision :shell, :path => "provision.sh"
+    # dev.vm.provision :shell, :path => "provision.sh"
+    dev.vm.provision "ansible" do |ansible|
+       ansible.playbook = "dev_recipe/site.yml"
+    end
 
     # Disable automatic box update checking. If you disable this, then
     # boxes will only be checked for updates when the user runs
