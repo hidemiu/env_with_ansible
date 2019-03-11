@@ -1,5 +1,0 @@
-- name: install rpm package
-  yum: name=https://dev.mysql.com/get/mysql80-community-release-el7-2.noarch.rpm
-
-- name: install mysql
-  yum: name=mysql-community-server
