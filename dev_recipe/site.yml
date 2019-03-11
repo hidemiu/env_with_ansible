@@ -6,7 +6,8 @@
   become: yes
   
   roles:
-  - { role: setup_httpd }
   - { role: repo_remi }
+  - { role: httpd }
+  - { role: php73 }
 
   
