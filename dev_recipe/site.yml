@@ -9,6 +9,7 @@
   - { role: repo_remi }
   - { role: httpd }
   - { role: php73 }
-  - { role: mysql80 }
+  - { role: mysql56 }
+#  - { role: mysql80 }
 
   
