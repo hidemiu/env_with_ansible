@@ -1,0 +1,13 @@
+---
+prerequisites: [
+  "gcc",
+  "gcc-c++",
+  "openssl-devel",
+  "readline-devel",
+  "zlib-devel",
+  "sqlite",
+  "sqlite-devel",
+  "ruby",
+  "ruby-devel",
+  "rubygems"
+]
