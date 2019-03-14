@@ -87,6 +87,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #   apt-get update
     #   apt-get install -y apache2
     # SHELL
+
+#    dev.vm.provision "shell", inline: "/home/vagrant/.rbenv/shims/mailcatcher --http-ip=192.168.33.77", run: "always"
+    dev.vm.provision "shell", inline: "/usr/local/bin/mailcatcher --http-ip=192.168.33.11", run: "always"
+
+
   end
   
 #  config.vm.define "stg" do |stg|

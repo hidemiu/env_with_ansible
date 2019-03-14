@@ -1,9 +1,5 @@
 - name: install prerequisites for ruby
   yum: name={{ prerequisites }} state=latest
 
-#- name: install mailcathcer
-#  gem: name=mailcatcher state=present user_install=false
-
 - name: gem install mailcathcer
- git shell: bash -lc "gem install mailcathcer"
-#  ignore_errors: yes
+  shell: bash -lc "gem install mailcatcher"
