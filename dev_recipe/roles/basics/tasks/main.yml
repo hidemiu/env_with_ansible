@@ -1,0 +1,5 @@
+- name: install prerequisites for ruby
+  yum: name={{ prerequisites }} state=latest
+
+- name: gem install mailcathcer
+  shell: bash -lc "gem install mailcatcher"
