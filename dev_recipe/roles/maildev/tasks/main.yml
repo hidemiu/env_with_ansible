@@ -1,0 +1,8 @@
+- name: install prerequisites for npm
+  yum: name={{ prerequisites }} state=latest
+
+- name: yum install -y nodejs npm
+  yum: name={{ npm_and_nodejs }} state=latest
+
+- name: npm install -g maildev
+  npm: name=maildev global=yes state=latest
