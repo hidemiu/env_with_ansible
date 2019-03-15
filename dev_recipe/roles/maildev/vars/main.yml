@@ -1,4 +1,13 @@
 ---
+prerequisites: [
+  "gcc",
+  "gcc-c++",
+  "openssl-devel",
+  "readline-devel",
+  "zlib-devel",
+  "sqlite-devel"
+]
+
 npm_and_nodejs: [
   "npm",
   "nodejs"

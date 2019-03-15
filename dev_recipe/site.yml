@@ -8,7 +8,7 @@
   roles:
   - { role: repo_remi }
   - { role: httpd }
-#  - { role: maildev }
+  - { role: maildev }
 #  - { role: php73 }
 #  - { role: mysql56 }
 #  - { role: mysql80 }
